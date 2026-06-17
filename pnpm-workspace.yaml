@@ -5,10 +5,20 @@ allowBuilds:
   '@vscode/vsce-sign': true
   esbuild: true
   keytar: false
-blockExoticSubdeps: true
-minimumReleaseAge: 4320
+blockExoticSubdeps: false
+minimumReleaseAge: 60
 minimumReleaseAgeExclude:
   - '@mizdra/*'
+  - '@voidzero-dev/*'
+  - vite-plus
+  - '@vitest/*'
+  - vite
+  - vitest
+  - '@oxc-project/*'
+  - '@oxlint/*'
+  - oxlint
+  - oxfmt
+  - oxlint-tsgolint
 overrides:
   vite: '$vite'
   vitest: '$vitest'
