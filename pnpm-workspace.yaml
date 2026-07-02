@@ -1,3 +1,21 @@
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  - vite-plus
+  - '@voidzero-dev/*'
+  - '@oxc-project/*'
+  - '@oxlint/*'
+  - '@oxfmt/*'
+  - '@oxlint-tsgolint/*'
+  - '@rolldown/*'
+  - '@tsdown/*'
+  - oxlint
+  - oxfmt
+  - oxlint-tsgolint
+  - tsdown
+  - rolldown
+  - '@mizdra/*'
+  - vitest
+  - '@vitest/*'
 packages:
   - 'packages/*'
   - 'crates/*'
@@ -6,12 +24,9 @@ allowBuilds:
   esbuild: true
   keytar: false
 blockExoticSubdeps: true
-minimumReleaseAge: 4320
-minimumReleaseAgeExclude:
-  - '@mizdra/*'
 overrides:
-  vite: '$vite'
-  vitest: '$vitest'
+  vite: 'catalog:'
+  vitest: 'catalog:'
 peerDependencyRules:
   allowAny:
     - vite
@@ -19,3 +34,7 @@ peerDependencyRules:
   allowedVersions:
     vite: '*'
     vitest: '*'
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.1d7ba811f0e456640b0e761e8e8acf77d1ad3251
+  vitest: 4.1.9
+  vite-plus: 0.0.0-commit.1d7ba811f0e456640b0e761e8e8acf77d1ad3251
